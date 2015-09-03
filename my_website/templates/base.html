@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Megan Slater</title>
+        <link href="{% static 'my_website/style.css' %}" rel="stylesheet" type="text/css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header>
+            <h1>Megan Slater</h1>
+            <p>Software Engineer</p>
+            <nav id="main_menu">
+                <ul>
+                    <li>About</li>
+                    <li>Technical Blog</li>
+                    <li>Personal Blog</li>
+                </ul>
+            </nav>
+        </header>
+        <aside id="right_bar">
+            <section id="awesome">
+                <h3>Daily Slice of Awesome</h3>
+            </section>
+            <section id="search">
+                <h3>Search Bar</h3>
+            </section>
+            <section id="tags">
+                <h3>Tag Cloud</h3>
+            </section>
+        </aside>
+        <section id="main_content">
+            {% block content %}
+            {% endblock %}
+        </section>
+        <footer>
+            <p>&copy2015 Megan Slater</p>
+        </footer>
+    </body>
+</html>
